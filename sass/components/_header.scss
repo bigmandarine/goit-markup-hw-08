@@ -1,0 +1,134 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 93px;
+  &__link {
+    font-size: 26px;
+    line-height: 1.17;
+    font-family: $logo-font;
+    text-decoration: none;
+  }
+  &__black {
+    color: var(--black-text-color);
+  }
+  &__accent {
+    color: var(--accent-color);
+  }
+}
+.site-nav {
+  &__list {
+    display: flex;
+    padding-left: 0px;
+    margin: 0px;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    color: var(--black-text-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.site-nav__list {
+  & .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link {
+  &:focus,
+  &:hover {
+    background-color: var(--white-color);
+    color: var(--accent-color);
+  }
+}
+#studio {
+  color: var(--accent-color);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    opacity: 1;
+    border-radius: 2px;
+  }
+}
+
+#portfolio {
+  color: var(--accent-color);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    opacity: 1;
+    border-radius: 2px;
+  }
+}
+.contacts {
+  display: flex;
+  padding-left: 0px;
+  margin-left: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  & .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--grey-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+    background-color: var(--white-color);
+  }
+  &:hover .mail,
+  &:focus .mail,
+  &:hover .telephone,
+  &:focus .telephone {
+    fill: var(--accent-color);
+  }
+}
+
+.telephone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--grey-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--grey-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

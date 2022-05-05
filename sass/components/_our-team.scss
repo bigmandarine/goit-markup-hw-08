@@ -1,0 +1,94 @@
+.section--our-team {
+  background-color: var(--our-team-color);
+}
+
+.our-team__list {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  justify-content: center;
+  padding-left: 0px;
+  & .our-team__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.our-team__title {
+  margin: 0px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-text-color);
+}
+.our-team__item {
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.our-team__about {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.our-team__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-text-color);
+  margin: 0px;
+  margin-bottom: 10px;
+}
+.our-team__work {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--grey-text-color);
+  margin: 0px;
+}
+.our-team__list-social {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  & li + li {
+    margin-left: 10px;
+  }
+}
+
+.our-team__link-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  fill: var(--social-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+.our-team__link-social:hover .our-team__image-social,
+.our-team__link-social:focus .our-team__image-social {
+  fill: var(--white-color);
+}
+
+.our-team__image-social {
+  height: 20px;
+  width: 20px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
