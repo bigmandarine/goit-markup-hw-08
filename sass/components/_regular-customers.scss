@@ -3,7 +3,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-text-color);
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     margin-bottom: 30px;
     margin-top: 0;
     font-size: 28px;
@@ -13,24 +13,38 @@
 .regular-customers__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+
   padding: 0;
+  @media screen and (min-width: $tablet-min) {
+    margin: -15px;
+    max-width: 768px;
+  }
 }
-@media screen and (max-width: $tablet-max) {
-  .regular-customers__link,
-  .regular-customers__image {
+
+.regular-customers__link,
+.regular-customers__image {
+  @media screen and (min-width: $mobile-s) {
     display: block;
     width: 100%;
   }
-  .regular-customers__item {
+}
+.regular-customers__item {
+  @media screen and (max-width: $mobile-max) {
     max-width: 210px;
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
-  .container__regular-customers {
+  @media screen and (min-width: $tablet-min) {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
+}
+.container__regular-customers {
+  @media screen and (max-width: $mobile-max) {
     padding: 0;
   }
 }
+
 .regular-customers__link {
   padding: 0px;
   background-color: var(--white-color);
@@ -45,11 +59,12 @@
   &:hover {
     border: 1px solid var(--accent-color);
   }
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
 }
+
 .regular-customers__image {
   width: 106px;
   height: 60px;

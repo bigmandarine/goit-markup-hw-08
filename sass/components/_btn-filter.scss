@@ -1,6 +1,6 @@
 .projects__menu-list {
   display: flex;
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     flex-wrap: wrap;
     & .projects__menu-item:nth-last-child(-n + 2) {
       margin-top: 10px;

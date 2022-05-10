@@ -1,6 +1,11 @@
 .container-header {
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     position: relative;
+  }
+  @media screen and (min-width: $tablet-min) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .header-logo {
@@ -16,17 +21,19 @@
   &__accent {
     color: var(--accent-color);
   }
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
 }
-
-@media screen and (max-width: $tablet-max) {
-  .mob-menu.is-open {
+// ---------------------------------- Мобильное Меню ----------------------------------
+.mob-menu.is-open {
+  @media screen and (min-width: $mobile-s) {
     display: none;
   }
-  .mob-menu {
+}
+.mob-menu {
+  @media screen and (min-width: $mobile-s) {
     z-index: 1;
     display: block;
     position: absolute;
@@ -51,7 +58,9 @@
       margin-top: 32px;
     }
   }
-  .mob-contacts {
+}
+.mob-contacts {
+  @media screen and (min-width: $mobile-s) {
     margin-top: calc((100vh - 1 * 320px) / 1.5);
     margin-bottom: 64px;
     &__list {
@@ -59,12 +68,16 @@
       margin: 0;
     }
   }
-  .mob-contacts__item {
+}
+.mob-contacts__item {
+  @media screen and (min-width: $mobile-s) {
     & + & {
       padding-top: 32px;
     }
   }
-  .mob-contacts__link {
+}
+.mob-contacts__link {
+  @media screen and (min-width: $mobile-s) {
     &.mob-tel {
       font-weight: 500;
       font-size: 34px;
@@ -79,7 +92,9 @@
       color: var(--grey-text-color);
     }
   }
-  .mob-social {
+}
+.mob-social {
+  @media screen and (min-width: $mobile-s) {
     margin-left: auto;
     margin-right: auto;
     &__list {
@@ -96,7 +111,9 @@
       position: relative;
     }
   }
-  .mob-social__list {
+}
+.mob-social__list {
+  @media screen and (min-width: $mobile-s) {
     & li + li ::before {
       position: absolute;
       left: -10px;
@@ -110,13 +127,18 @@
       margin-left: 20px;
     }
   }
-  .site-nav {
+}
+.site-nav {
+  @media screen and (max-width: $mobile-max) {
     display: none;
   }
-  .contacts {
+}
+
+.menu-button {
+  @media screen and (min-width: 768px) {
     display: none;
   }
-  .menu-button {
+  @media screen and (min-width: $mobile-s) {
     z-index: 2;
     position: absolute;
     top: 50%;
@@ -128,23 +150,143 @@
     width: 40px;
     height: 40px;
     background-color: var(--white-color);
-  }
-  & .icon-cross {
-    display: block;
-  }
-  &.is-open .icon-cross {
-    display: none;
-  }
-  &.is-open .icon-menu {
-    display: block;
-  }
-  & .icon-menu {
-    display: none;
+    & .icon-cross {
+      display: block;
+    }
+    &.is-open .icon-cross {
+      display: none;
+    }
+    &.is-open .icon-menu {
+      display: block;
+    }
+    & .icon-menu {
+      display: none;
+    }
   }
 }
+
 #studio {
   color: var(--accent-color);
 }
 #portfolio {
   color: var(--accent-color);
+}
+// ---------------------------------- Планшет Меню ----------------------------------
+.site-nav {
+  &__list {
+    display: flex;
+    padding-left: 0px;
+    margin: 0px;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    color: var(--black-text-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.site-nav__list {
+  & .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.site-nav__link {
+  &:focus,
+  &:hover {
+    background-color: var(--white-color);
+    color: var(--accent-color);
+  }
+}
+#studio {
+  color: var(--accent-color);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    opacity: 1;
+    border-radius: 2px;
+  }
+}
+
+#portfolio {
+  color: var(--accent-color);
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    opacity: 1;
+    border-radius: 2px;
+  }
+}
+.contacts {
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  margin-left: auto;
+  margin: 0;
+  & .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  color: var(--grey-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+    background-color: var(--white-color);
+  }
+  &:hover .mail,
+  &:focus .mail,
+  &:hover .telephone,
+  &:focus .telephone {
+    fill: var(--accent-color);
+  }
+}
+
+.telephone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--grey-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--grey-text-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

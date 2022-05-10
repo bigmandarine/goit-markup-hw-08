@@ -1,8 +1,6 @@
 .portfolio__list {
   margin-top: 0px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+
   padding-left: 0px;
   margin-bottom: 0px;
   & .portfolio__item:not(:nth-child(1)) {
@@ -34,6 +32,9 @@
 .portfolio_text--hover {
   position: relative;
   overflow: hidden;
+  & img {
+    width: 100%;
+  }
 }
 
 .portfolio-img-text {
@@ -51,7 +52,7 @@
   transform: translatey(100%);
 
   display: flex;
-  max-width: 370px;
+  max-width: 450px;
   padding: 63px 24px;
   margin: 0;
   position: absolute;

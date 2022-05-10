@@ -26,13 +26,13 @@
   transform: translate(-50%, -50%);
   background-color: var(--white-color);
   transition: transform 250ms var(--timing-function);
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     max-width: 450px;
   }
 }
 .modal_table {
   margin-top: 12px;
-  @media screen and (max-width: $tablet-max) {
+  @media screen and (min-width: $mobile-s) {
     max-width: 370px;
     margin-top: 0;
     margin-bottom: 0;

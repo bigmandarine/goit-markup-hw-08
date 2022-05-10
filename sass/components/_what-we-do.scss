@@ -1,4 +1,4 @@
-@media screen and (max-width: $tablet-max) {
+@media screen and (min-width: $mobile-s) {
   .section--what-we-do {
     display: none;
   }
