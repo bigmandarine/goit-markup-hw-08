@@ -3,6 +3,9 @@ body {
   font-weight: 400;
   color: var(--black-text-color);
   background-color: var(--white-color);
+  @media screen and (min-width: 320px) {
+    width: 100%;
+  }
 }
 
 img {
@@ -18,15 +21,22 @@ header {
   border-bottom: 1px solid var(--border-header-color);
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media screen and (max-width: $tablet-max) {
+    max-width: $mobile;
+  }
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+  @media screen and (max-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 button:hover {
   cursor: pointer;

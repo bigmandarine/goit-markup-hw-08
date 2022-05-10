@@ -17,18 +17,58 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <!-- Шапка -->
     <header>
-      <div class="container header">
+      <div class="container container-header">
         <div class="header-logo logo">
           <a class="header-logo__link" href="index.html"
             ><span class="header-logo__accent">Web</span
             ><span class="header-logo__black">Studio</span></a
           >
         </div>
+        <button class="menu-button is-open" data-menu-button>
+          <svg aria-label="Переключатель мобильного меню" width="40" height="40">
+            <use class="icon-menu" href="./images/icons.svg#menu_40px" width="40" height="40"></use>
+            <use class="icon-cross" href="./images/icons.svg#close_40px"></use>
+          </svg>
+        </button>
+        <!-- Мобильное меню -->
+        <div class="mob-menu is-open" data-menu>
+          <nav class="mob-menu__nav">
+            <ul class="mob-menu__list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link" href="index.html">Студия</a>
+              </li>
+              <li class="mob-menu__item">
+                <a id="portfolio" class="mob-menu__link" href="portfolio.html">Портфолио</a>
+              </li>
+              <li class="mob-menu__item"><a class="mob-menu__link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="mob-contacts">
+            <ul class="mob-contacts__list">
+              <li class="mob-contacts__item">
+                <a class="mob-contacts__link mob-tel" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mob-contacts__item">
+                <a class="mob-contacts__link mob-mail" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mob-social">
+            <ul class="mob-social__list">
+              <li class="mob-social__item"><a class="mob-social__link" href="#">Instagram</a></li>
+              <li class="mob-social__item"><a class="mob-social__link" href="#">Twitter</a></li>
+              <li class="mob-social__item"><a class="mob-social__link" href="#">Facebook</a></li>
+              <li class="mob-social__item"><a class="mob-social__link" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Меню сайта -->
         <nav class="site-nav">
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -66,27 +106,27 @@
       <!-- Фильтры -->
       <section class="section">
         <div class="container projects">
-          <ul class="projects_menu-list">
-            <li class="projects_menu-item">
-              <button class="projects_menu-btn" type="button">Все</button>
+          <ul class="projects__menu-list">
+            <li class="projects__menu-item">
+              <button class="projects__menu-btn" type="button">Все</button>
             </li>
-            <li class="projects_menu-item">
-              <button class="projects_menu-btn" type="button">Веб-сайты</button>
+            <li class="projects__menu-item">
+              <button class="projects__menu-btn" type="button">Веб-сайты</button>
             </li>
-            <li class="projects_menu-item">
-              <button class="projects_menu-btn" type="button">Приложения</button>
+            <li class="projects__menu-item">
+              <button class="projects__menu-btn" type="button">Приложения</button>
             </li>
-            <li class="projects_menu-item">
-              <button class="projects_menu-btn" type="button">Дизайн</button>
+            <li class="projects__menu-item">
+              <button class="projects__menu-btn" type="button">Дизайн</button>
             </li>
-            <li class="projects_menu-item">
-              <button class="projects_menu-btn" type="button">Маркетинг</button>
+            <li class="projects__menu-item">
+              <button class="projects__menu-btn" type="button">Маркетинг</button>
             </li>
           </ul>
           <!-- Портфолио -->
           <ul class="portfolio__list">
             <li class="portfolio__item">
-              <a class="portfolio__link" href="./index.html"
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img
                     src="images/img-portfolio-sq.jpeg"
@@ -100,13 +140,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Техно кряк</h3>
-                  <p class="portfolio_subtitle">Веб-сайт</p>
+                  <h3 class="portfolio__title">Техно кряк</h3>
+                  <p class="portfolio__subtitle">Веб-сайт</p>
                 </div>
               </a>
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img
                     src="images/img-basketball-sq.jpeg"
@@ -120,13 +160,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Постер New Orlean vs Golden Star</h3>
-                  <p class="portfolio_subtitle">Дизайн</p>
+                  <h3 class="portfolio__title">Постер New Orlean vs Golden Star</h3>
+                  <p class="portfolio__subtitle">Дизайн</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img
                     src="images/img3-portfolio-sq.jpeg"
@@ -140,13 +180,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Ресторан Seafood</h3>
-                  <p class="portfolio_subtitle">Приложение</p>
+                  <h3 class="portfolio__title">Ресторан Seafood</h3>
+                  <p class="portfolio__subtitle">Приложение</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img src="images/img4-portfolio-sq.jpeg" width="370" alt="черные наушники" />
                   <p class="portfolio-img-text">
@@ -156,13 +196,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Проект Prime</h3>
-                  <p class="portfolio_subtitle">Маркетинг</p>
+                  <h3 class="portfolio__title">Проект Prime</h3>
+                  <p class="portfolio__subtitle">Маркетинг</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img
                     src="images/img5-portfolio-sq.jpeg"
@@ -176,13 +216,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Проект Boxes</h3>
-                  <p class="portfolio_subtitle">Приложение</p>
+                  <h3 class="portfolio__title">Проект Boxes</h3>
+                  <p class="portfolio__subtitle">Приложение</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img
                     src="images/img6-portfolio-sq.jpeg"
@@ -196,13 +236,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Inspiration has no Borders</h3>
-                  <p class="portfolio_subtitle">Веб-сайт</p>
+                  <h3 class="portfolio__title">Inspiration has no Borders</h3>
+                  <p class="portfolio__subtitle">Веб-сайт</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img src="images/img7-portfolio-sq.jpeg" width="370" alt="открытая книга" />
                   <p class="portfolio-img-text">
@@ -212,13 +252,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Издание Limited Edition</h3>
-                  <p class="portfolio_subtitle">Дизайн</p>
+                  <h3 class="portfolio__title">Издание Limited Edition</h3>
+                  <p class="portfolio__subtitle">Дизайн</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img src="images/img8-portfolio-sq.jpeg" width="370" alt="лейба от одежды" />
                   <p class="portfolio-img-text">
@@ -228,13 +268,13 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Проект LAB</h3>
-                  <p class="portfolio_subtitle">Маркетинг</p>
+                  <h3 class="portfolio__title">Проект LAB</h3>
+                  <p class="portfolio__subtitle">Маркетинг</p>
                 </div></a
               >
             </li>
             <li class="portfolio__item">
-              <a class="portfolio__link" href=""
+              <a class="portfolio__link" href="#"
                 ><div class="portfolio_text--hover">
                   <img
                     src="images/img9-portfolio-sq.jpeg"
@@ -248,8 +288,8 @@
                   </p>
                 </div>
                 <div class="portfolio__content">
-                  <h3 class="portfolio_title">Growing Business</h3>
-                  <p class="portfolio_subtitle">Приложение</p>
+                  <h3 class="portfolio__title">Growing Business</h3>
+                  <p class="portfolio__subtitle">Приложение</p>
                 </div></a
               >
             </li>
@@ -283,25 +323,25 @@
           <p class="footer_social-title">присоединяйтесь</p>
           <ul class="footer_social-list">
             <li class="footer_social-item">
-              <a class="footer_social-link" href=""
+              <a class="footer_social-link" href="#"
                 ><svg class="footer_social-img">
                   <use href="./images/icons.svg#instagram"></use></svg
               ></a>
             </li>
             <li class="footer_social-item">
-              <a class="footer_social-link" href=""
+              <a class="footer_social-link" href="#"
                 ><svg class="footer_social-img">
                   <use href="./images/icons.svg#twitter"></use></svg
               ></a>
             </li>
             <li class="footer_social-item">
-              <a class="footer_social-link" href=""
+              <a class="footer_social-link" href="#"
                 ><svg class="footer_social-img">
                   <use href="./images/icons.svg#facebook"></use></svg
               ></a>
             </li>
             <li class="footer_social-item">
-              <a class="footer_social-link" href=""
+              <a class="footer_social-link" href="#"
                 ><svg class="footer_social-img">
                   <use href="./images/icons.svg#linkedin"></use></svg
               ></a>
@@ -329,5 +369,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
