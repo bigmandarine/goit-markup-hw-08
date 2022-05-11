@@ -1,21 +1,19 @@
 .footer {
   background-color: var(--h1-section-and-footer-color);
 }
-.logo {
-  font-size: 26px;
-  line-height: 1.17;
-  font-family: $logo-font;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-}
+
 .footer__content {
-  @media screen and (min-width: $mobile-s) {
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet-max) {
     text-align: center;
   }
   @media screen and (min-width: $tablet-min) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    align-items: baseline;
   }
 }
 
@@ -154,9 +152,22 @@
   fill: #ffffff;
 }
 /* ---------------------------------- Подписка на рассылку ---------------------------------- */
+
 .subscription {
-  @media screen and (min-width: $mobile-s) {
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet-max) {
     margin-top: 60px;
+  }
+  &_content {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      width: 570px;
+      margin-top: 20px;
+    }
+  }
+  &_button {
+    padding-left: 29px;
+    padding-right: 29px;
   }
 }
 .subscription_title {
@@ -184,6 +195,9 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   @media screen and (min-width: $mobile-s) {
     width: 100%;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: 0;
   }
 }
 input[type='text']::placeholder {

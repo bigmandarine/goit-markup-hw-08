@@ -20,6 +20,19 @@ ul {
 header {
   border-bottom: 1px solid var(--border-header-color);
 }
+.logo {
+  font-family: $logo-font;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  @media screen and (max-width: $tablet-max) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -29,14 +42,14 @@ header {
   @media screen and (max-width: $mobile-max) {
     max-width: $mobile;
   }
-  @media screen and (min-width: $tablet-min) {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     width: 768px;
   }
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  @media screen and (min-width: $mobile-s) {
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet-max) {
     padding-top: 60px;
     padding-bottom: 60px;
   }

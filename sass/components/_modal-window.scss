@@ -29,10 +29,13 @@
   @media screen and (min-width: $mobile-s) {
     max-width: 450px;
   }
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+  }
 }
 .modal_table {
   margin-top: 12px;
-  @media screen and (min-width: $mobile-s) {
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet-max) {
     max-width: 370px;
     margin-top: 0;
     margin-bottom: 0;
@@ -40,7 +43,9 @@
 }
 
 .modal_tittle {
-  max-width: 370px;
+  @media screen and (min-width: $mobile-s) and (max-width: $tablet-max) {
+    max-width: 370px;
+  }
   margin: 0;
   text-align: center;
   font-style: normal;
@@ -116,6 +121,10 @@
 }
 
 .modal_field.modal_checkbox {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+  }
   position: relative;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -163,6 +172,10 @@
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--grey-text-color);
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal_checkbox-link {
   color: var(--accent-color);

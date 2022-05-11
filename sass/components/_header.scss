@@ -2,19 +2,17 @@
   @media screen and (min-width: $mobile-s) {
     position: relative;
   }
-  @media screen and (min-width: $tablet-min) {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 .header-logo {
-  &__link {
-    font-size: 26px;
-    line-height: 1.17;
-    font-family: $logo-font;
-    text-decoration: none;
-  }
   &__black {
     color: var(--black-text-color);
   }
@@ -24,6 +22,10 @@
   @media screen and (min-width: $mobile-s) {
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    line-height: 1.19;
   }
 }
 // ---------------------------------- Мобильное Меню ----------------------------------
@@ -57,6 +59,9 @@
     &__item + &__item {
       margin-top: 32px;
     }
+  }
+  @media screen and (min-width: $tablet-min) {
+    display: none;
   }
 }
 .mob-contacts {
@@ -207,16 +212,18 @@
 }
 #studio {
   color: var(--accent-color);
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    opacity: 1;
-    border-radius: 2px;
+  @media screen and (min-width: $tablet-min) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      opacity: 1;
+      border-radius: 2px;
+    }
   }
 }
 
@@ -238,13 +245,23 @@
   @media screen and (max-width: $mobile-max) {
     display: none;
   }
-  display: flex;
-  flex-direction: column;
-  padding-left: 0px;
-  margin-left: auto;
-  margin: 0;
-  & .contacts__item:not(:last-child) {
-    margin-bottom: 10px;
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    margin-left: auto;
+    margin: 0;
+    & .contacts__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    & .contacts__item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

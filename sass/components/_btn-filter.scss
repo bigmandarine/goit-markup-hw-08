@@ -11,6 +11,14 @@
       margin-top: 10px;
     }
   }
+  @media screen and (min-width: $tablet-min) {
+    & .projects__menu-item:nth-last-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    justify-content: center;
+  }
 
   margin-top: 0px;
   margin-bottom: 40px;

@@ -3,14 +3,20 @@
   margin-bottom: 30px;
 }
 .our-advantages__list {
-  @media screen and (min-width: $mobile-s) {
+  @media screen and (min-width: $mobile-s) and (max-width: $mobile-max) {
     margin: 0;
     padding: 0;
+    max-width: 450px;
   }
+
   @media screen and (min-width: $tablet-min) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+    padding: 0;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
   }
 }
 .our-advantages__item {
