@@ -1520,6 +1520,7 @@ input[type='text']::placeholder {
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function);
+  overflow-y: scroll;
 }
 
 .backdrop.backdrop--is-hiden {
