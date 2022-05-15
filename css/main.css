@@ -199,7 +199,7 @@ button:hover {
     background-color: var(--white-color);
     padding: 48px 40px;
     width: 100%;
-    height: 100vh;
+    max-height: 796px;
   }
   .mob-menu__list {
     margin: 0;
@@ -225,7 +225,7 @@ button:hover {
 
 @media screen and (min-width: 320px) {
   .mob-contacts {
-    margin-top: calc((100vh - 1 * 320px) / 1.5);
+    margin-top: 302px;
     margin-bottom: 64px;
   }
   .mob-contacts__list {
@@ -236,7 +236,7 @@ button:hover {
 
 @media screen and (min-width: 320px) {
   .mob-contacts__item + .mob-contacts__item {
-    padding-top: 32px;
+    margin-top: 32px;
   }
 }
 
@@ -257,27 +257,7 @@ button:hover {
 }
 
 @media screen and (min-width: 320px) {
-  .mob-social {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .mob-social__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  .mob-social__link {
-    color: var(--accent-color);
-  }
-  .mob-social__item {
-    position: relative;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .mob-social__list li + li ::before {
+  .mob-social li + li ::before {
     position: absolute;
     left: -10px;
     top: -2px;
@@ -285,8 +265,23 @@ button:hover {
     height: 22px;
     border: 1px solid rgba(33, 33, 33, 0.2);
   }
-  .mob-social__list li + li {
-    margin-left: 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .mob-social__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin: -10px;
+  }
+  .mob-social__link {
+    color: var(--accent-color);
+  }
+  .mob-social__item {
+    position: relative;
+    display: inline;
+    margin: 10px;
   }
 }
 
@@ -1528,14 +1523,14 @@ input[type='text']::placeholder {
   pointer-events: none;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 93px 0;
+  }
+}
+
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 94%;
   padding: 40px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background-color: var(--white-color);
   -webkit-transition: -webkit-transform 250ms var(--timing-function);
   transition: -webkit-transform 250ms var(--timing-function);
@@ -1543,15 +1538,34 @@ input[type='text']::placeholder {
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 767px) {
   .modal {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .modal {
+    width: 100%;
     max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal {
-    max-width: 528px;
+    width: 528px;
   }
 }
 
