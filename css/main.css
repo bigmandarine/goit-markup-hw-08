@@ -192,13 +192,23 @@ button:hover {
 @media screen and (min-width: 320px) {
   .mob-menu {
     z-index: 1;
-    display: block;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: absolute;
     left: 0;
     top: 0;
     background-color: var(--white-color);
     padding: 48px 40px;
     width: 100%;
+    height: 100vh;
     max-height: 796px;
   }
   .mob-menu__list {
@@ -225,7 +235,6 @@ button:hover {
 
 @media screen and (min-width: 320px) {
   .mob-contacts {
-    margin-top: 302px;
     margin-bottom: 64px;
   }
   .mob-contacts__list {

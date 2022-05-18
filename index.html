@@ -46,25 +46,29 @@
               <li class="mob-menu__item"><a class="mob-menu__link" href="#">Контакты</a></li>
             </ul>
           </nav>
-          <div class="mob-contacts">
-            <ul class="mob-contacts__list">
-              <li class="mob-contacts__item">
-                <a class="mob-contacts__link mob-tel" href="tel:+380961111111">+38 096 111 11 11</a>
-              </li>
-              <li class="mob-contacts__item">
-                <a class="mob-contacts__link mob-mail" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="mob-social">
-            <ul class="mob-social__list">
-              <li class="mob-social__item"><a class="mob-social__link" href="#">Instagram</a></li>
-              <li class="mob-social__item"><a class="mob-social__link" href="#">Twitter</a></li>
-              <li class="mob-social__item"><a class="mob-social__link" href="#">Facebook</a></li>
-              <li class="mob-social__item"><a class="mob-social__link" href="#">LinkedIn</a></li>
-            </ul>
+          <div class="mob-menu__contacts-box">
+            <div class="mob-contacts">
+              <ul class="mob-contacts__list">
+                <li class="mob-contacts__item">
+                  <a class="mob-contacts__link mob-tel" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contacts__item">
+                  <a class="mob-contacts__link mob-mail" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mob-social">
+              <ul class="mob-social__list">
+                <li class="mob-social__item"><a class="mob-social__link" href="#">Instagram</a></li>
+                <li class="mob-social__item"><a class="mob-social__link" href="#">Twitter</a></li>
+                <li class="mob-social__item"><a class="mob-social__link" href="#">Facebook</a></li>
+                <li class="mob-social__item"><a class="mob-social__link" href="#">LinkedIn</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- Меню сайта -->
@@ -172,19 +176,37 @@
           <ul class="what-we-do__list">
             <li class="what-we-do__item">
               <div class="what-we-do__content">
-                <img src="images/img-1sq.jpeg" width="370" alt="работник пишет код" />
+                <img
+                  srcset="./images/work.jpeg 370w, ./images/work@2x.jpeg 740w"
+                  sizes="(min-width: 1200px) 370px, 370px"
+                  src="images/work.jpeg"
+                  width="370"
+                  alt="работник пишет код"
+                />
                 <p class="what-we-do__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="what-we-do__item">
               <div class="what-we-do__content">
-                <img src="images/img-2sq.jpeg" width="370" alt="работник выбирает интерфейс" />
+                <img
+                  srcset="./images/work_2.jpeg 370w, ./images/work_2@2x.jpeg 740w"
+                  sizes="(min-width: 1200px) 370px, 370px"
+                  src="images/work_2.jpeg"
+                  width="370"
+                  alt="работник выбирает интерфейс"
+                />
                 <p class="what-we-do__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="what-we-do__item">
               <div class="what-we-do__content">
-                <img src="images/img-3sq.jpeg" width="370" alt="работник выбирает цвет" />
+                <img
+                  srcset="./images/work_3.jpeg 370w, ./images/work_3@2x.jpeg 740w"
+                  sizes="(min-width: 1200px) 370px"
+                  src="images/work_3.jpeg"
+                  width="370"
+                  alt="работник выбирает цвет"
+                />
                 <p class="what-we-do__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -201,7 +223,7 @@
             <li class="our-team__item">
               <img
                 srcset="./images/mobile/team_1-450.jpeg 450w, ./images/mobile/team_1-900.jpeg 900w"
-                sizes="(min-width: 1200px) 470px, (min-width: 768px) 354px, 450px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 class="our-team__image"
                 src="images/img-sq.jpeg"
                 alt="работник мужчина в очках и в рубашке"
@@ -241,7 +263,7 @@
               <img
                 class="our-team__image"
                 srcset="./images/mobile/team_2-450.jpeg 450w, ./images/mobile/team_2-900.jpeg 900w"
-                sizes="(min-width: 1200px) 470px, (min-width: 768px) 354px, 450px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 src="images/img4sq.jpeg"
                 max-width="270"
                 alt="работник женщина"
@@ -281,7 +303,7 @@
               <img
                 class="our-team__image"
                 srcset="./images/mobile/team_3-450.jpeg 450w, ./images/mobile/team_3-900.jpeg 900w"
-                sizes="(min-width: 1200px) 470px, (min-width: 768px) 354px, 450px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 src="images/img5sq.jpeg"
                 max-width="270"
                 alt="работник мужчина без очков"
@@ -321,7 +343,7 @@
               <img
                 class="our-team__image"
                 srcset="./images/mobile/team_4-450.jpeg 450w, ./images/mobile/team_4-900.jpeg 900w"
-                sizes="(min-width: 1200px) 470px, (min-width: 768px) 354px, 450px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px"
                 src="images/img6sq.jpeg"
                 max-width="270"
                 alt="работник мужчина в  очках и в футболке"

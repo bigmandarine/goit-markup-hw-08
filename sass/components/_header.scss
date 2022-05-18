@@ -37,13 +37,17 @@
 .mob-menu {
   @media screen and (min-width: $mobile-s) {
     z-index: 1;
-    display: block;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
     left: 0;
     top: 0;
     background-color: var(--white-color);
     padding: 48px 40px;
     width: 100%;
+    height: 100vh;
     max-height: 796px;
     &__list {
       margin: 0;
@@ -66,7 +70,7 @@
 }
 .mob-contacts {
   @media screen and (min-width: $mobile-s) {
-    margin-top: 302px;
+    // margin-top: 302px;
     margin-bottom: 64px;
     &__list {
       padding: 0;
