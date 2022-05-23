@@ -7,6 +7,9 @@ body {
     width: 100%;
   }
 }
+body.is-open {
+  overflow: hidden;
+}
 
 img {
   display: block;

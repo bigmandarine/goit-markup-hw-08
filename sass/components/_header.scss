@@ -29,12 +29,32 @@
   }
 }
 // ---------------------------------- Мобильное Меню ----------------------------------
-.mob-menu.is-open {
-  @media screen and (min-width: $mobile-s) {
+
+.mob-menu {
+  display: none;
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--black-text-color);
+  }
+  &__item + &__item {
+    margin-top: 32px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
     display: none;
   }
 }
-.mob-menu {
+.mob-menu.is-open {
+  @media screen and (min-width: $mobile-s) {
+    display: block;
+  }
   @media screen and (min-width: $mobile-s) {
     z-index: 1;
 
@@ -49,20 +69,6 @@
     width: 100%;
     height: 100vh;
     max-height: 796px;
-    &__list {
-      margin: 0;
-      padding: 0;
-    }
-    &__link {
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 1.17;
-      letter-spacing: 0.02em;
-      color: var(--black-text-color);
-    }
-    &__item + &__item {
-      margin-top: 32px;
-    }
   }
   @media screen and (min-width: $tablet-min) {
     display: none;
@@ -139,12 +145,13 @@
 }
 
 .menu-button {
+  position: absolute;
   @media screen and (min-width: 768px) {
     display: none;
   }
   @media screen and (min-width: $mobile-s) {
     z-index: 2;
-    position: absolute;
+
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
@@ -155,16 +162,17 @@
     height: 40px;
     background-color: var(--white-color);
     & .icon-cross {
-      display: block;
+      display: none;
+      position: sticky;
     }
     &.is-open .icon-cross {
-      display: none;
-    }
-    &.is-open .icon-menu {
       display: block;
     }
-    & .icon-menu {
+    &.is-open .icon-menu {
       display: none;
+    }
+    & .icon-menu {
+      display: block;
     }
   }
 }

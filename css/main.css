@@ -29,6 +29,10 @@ body {
   }
 }
 
+body.is-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   height: auto;
@@ -184,14 +188,41 @@ button:hover {
   }
 }
 
-@media screen and (min-width: 320px) {
-  .mob-menu.is-open {
+.mob-menu {
+  display: none;
+}
+
+.mob-menu__list {
+  margin: 0;
+  padding: 0;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--black-text-color);
+}
+
+.mob-menu__item + .mob-menu__item {
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-menu {
     display: none;
   }
 }
 
 @media screen and (min-width: 320px) {
-  .mob-menu {
+  .mob-menu.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .mob-menu.is-open {
     z-index: 1;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -212,24 +243,10 @@ button:hover {
     height: 100vh;
     max-height: 796px;
   }
-  .mob-menu__list {
-    margin: 0;
-    padding: 0;
-  }
-  .mob-menu__link {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    color: var(--black-text-color);
-  }
-  .mob-menu__item + .mob-menu__item {
-    margin-top: 32px;
-  }
 }
 
 @media screen and (min-width: 768px) {
-  .mob-menu {
+  .mob-menu.is-open {
     display: none;
   }
 }
@@ -301,6 +318,10 @@ button:hover {
   }
 }
 
+.menu-button {
+  position: absolute;
+}
+
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
@@ -310,7 +331,6 @@ button:hover {
 @media screen and (min-width: 320px) {
   .menu-button {
     z-index: 2;
-    position: absolute;
     top: 50%;
     right: 15px;
     -webkit-transform: translateY(-50%);
@@ -323,16 +343,18 @@ button:hover {
     background-color: var(--white-color);
   }
   .menu-button .icon-cross {
-    display: block;
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
   }
   .menu-button.is-open .icon-cross {
-    display: none;
-  }
-  .menu-button.is-open .icon-menu {
     display: block;
   }
-  .menu-button .icon-menu {
+  .menu-button.is-open .icon-menu {
     display: none;
+  }
+  .menu-button .icon-menu {
+    display: block;
   }
 }
 
@@ -1235,6 +1257,7 @@ button:hover {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  letter-spacing: 0.06em;
   color: var(--black-text-color);
   margin-bottom: 4px;
   margin-top: 0px;
@@ -1245,6 +1268,7 @@ button:hover {
   margin-bottom: 0px;
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.03em;
   color: var(--grey-text-color);
 }
 
