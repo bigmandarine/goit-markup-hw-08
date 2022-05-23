@@ -95,9 +95,13 @@
     &.mob-tel {
       font-weight: 500;
       font-size: 34px;
+
       line-height: 1.17;
       letter-spacing: 0.02em;
       color: var(--accent-color);
+      @media screen and (max-width: $mobile) {
+        font-size: 8vw;
+      }
     }
     &.mob-mail {
       font-weight: 500;
@@ -128,6 +132,9 @@
     }
     &__link {
       color: var(--accent-color);
+      @media screen and (max-width: $mobile) {
+        font-size: 4vw;
+      }
     }
     &__item {
       position: relative;
@@ -232,8 +239,40 @@
     }
   }
 }
+#studio-mob {
+  color: var(--accent-color);
+  @media screen and (min-width: $tablet-min) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      opacity: 1;
+      border-radius: 2px;
+    }
+  }
+}
 
 #portfolio {
+  color: var(--accent-color);
+  @media screen and (min-width: $tablet-min) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      opacity: 1;
+      border-radius: 2px;
+    }
+  }
+}
+#portfolio-mob {
   color: var(--accent-color);
   @media screen and (min-width: $tablet-min) {
     &::after {
