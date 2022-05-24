@@ -1,5 +1,5 @@
 .section--what-we-do {
-  @media screen and (min-width: $mobile-s) and (max-width: $tablet-max) {
+  @media screen and (max-width: $tablet-max) {
     display: none;
   }
 }

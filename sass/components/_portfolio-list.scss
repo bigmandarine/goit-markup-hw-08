@@ -67,6 +67,8 @@
 .portfolio-img-text {
   @media screen and (max-width: $mobile) {
     font-size: 4vw;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
   }
   position: absolute;
   top: 0;

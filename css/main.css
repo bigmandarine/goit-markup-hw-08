@@ -46,7 +46,7 @@ ul {
   list-style: none;
 }
 
-.container-header {
+header {
   border-bottom: 1px solid var(--border-header-color);
 }
 
@@ -702,6 +702,8 @@ button:hover {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero.jpeg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpeg);
     max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -840,7 +842,7 @@ button:hover {
   color: var(--black-text-color);
 }
 
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .section--what-we-do {
     display: none;
   }
@@ -1316,6 +1318,8 @@ button:hover {
 @media screen and (max-width: 480px) {
   .portfolio-img-text {
     font-size: 4vw;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
   }
 }
 
